@@ -4,8 +4,10 @@ public class WelcomeMessage
 {
     public string Firstmessage { get; set; }
     public string Secondmessage { get; set; }
+    
+    public string Compliment { get; set; }
 
-    public WelcomeMessage(string FirstMessage = "Heisann, mr. Anon!")
+    public WelcomeMessage(string FirstMessage)
     {
         Firstmessage = Firstmessage;
     }
@@ -16,8 +18,8 @@ public class WelcomeMessage
         Secondmessage = SecondMessage;
     }
 
-    public void Print()
+    public void Print(string Compliment = "Du er snill!")
     {
-        Console.WriteLine(Firstmessage+""+Secondmessage);
+        Console.WriteLine(Firstmessage + " " + Secondmessage + " " + Compliment);
     }
 }
