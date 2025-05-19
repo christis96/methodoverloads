@@ -2,24 +2,24 @@ namespace methodoverloads;
 
 public class WelcomeMessage
 {
-    public string Firstmessage { get; set; }
-    public string Secondmessage { get; set; }
+    public string FirstMessage { get; set; }
+    public string SecondMessage { get; set; }
     
     public string Compliment { get; set; }
 
-    public WelcomeMessage(string FirstMessage)
+    public WelcomeMessage(string firstMessage)
     {
-        Firstmessage = Firstmessage;
+        FirstMessage = firstMessage;
     }
 
-    public WelcomeMessage(string FirstMessage="Heisann, mr. Anon!", string SecondMessage = "Velkommen!")
+    public WelcomeMessage(string firstMessage="Heisann, mr. Anon!", string secondMessage = "Velkommen!")
     {
-        Firstmessage = FirstMessage;
-        Secondmessage = SecondMessage;
+        FirstMessage = firstMessage;
+        SecondMessage = secondMessage;
     }
 
     public void Print(string Compliment = "Du er snill!")
     {
-        Console.WriteLine(Firstmessage + " " + Secondmessage + " " + Compliment);
+        Console.WriteLine($"{FirstMessage} {SecondMessage} {Compliment}");
     }
 }
